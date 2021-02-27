@@ -4,12 +4,12 @@ function toSquare(width, length) {
     let squareRectangle = width * length;
     let squareQuadrate = Math.pow(length, 2);
 
-     if(width && length) {
+     if(isNaN(width) && isNaN(length)) {
          return squareRectangle;
-     } else if(width === 0 && length) {
+     } else if(isNaN(length)) {
          return squareQuadrate;
-     }
+     } 
 }
 
 console.log(toSquare(5,5));
-console.log(toSquare(0,6));
+console.log(toSquare(6));
