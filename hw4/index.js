@@ -6,9 +6,17 @@ const car = {
 }
 
 function time(n) {
-    let distance = n / speed;
+    let distance = n / this.speed;
 
+    if(distance > 4) {
+        const change = Math.trunc(distance / 5) ;
+        return distance + change;
+    }
+
+        return distance;
 
 }
 
-console.log(car)
+console.log(car);
+
+console.log(this.time(100));
